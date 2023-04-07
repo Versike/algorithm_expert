@@ -33,34 +33,5 @@ What i want/see
 
   А где хранить созданных экспертов через стримлит?
 
-  # Генерация машины
-def generate_car():
-    make = random.choice(make_list)
-    model = random.choice(model_list)
-    year = random.choice(year_list)
-    car = Car(make, model, year)
-    car_list.append(car)
-
-# Отображение списка машин
-def view_cars():
-    st.write("Список машин:")
-    for i, car in enumerate(car_list):
-        st.write(f"{i+1}. {car.make} {car.model} {car.year}")
-
-# Главная страница
-def main():
-    st.write("Добавить случайную машину")
-    if st.button("Добавить машину"):
-        generate_car()
-        st.write(f"{car_list[-1].make} {car_list[-1].model} {car_list[-1].year} добавлен!")
-
-# Страница со списком машин
-def car_page():
-    view_cars()
-
-# Главная страница и навигация
-st.sidebar.title("Навигация")
-pages = {"Добавить машину": main, "Список машин": car_page}
-selection = st.sidebar.radio("Перейти на", list(pages.keys()))
-page = pages[selection]
-page()
+  Для того чтобы сделать приложения для прогонки алгоритмов, я думаю стоит сделать так:
+    Значит впервую очередь необходимо сделать чтобы задания сначала шли одному эксперту

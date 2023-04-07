@@ -1,6 +1,3 @@
-# Подключение классов
-from classes.answer import Answer
-from classes.task import Task
 from classes.expert import Expert
 
 # Подключение библиотек
