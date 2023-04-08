@@ -2,18 +2,31 @@
 from generator.objects_generator import generate_task
 from generator.objects_generator import generate_expert
 
-import random
+def distribute_task_to_expert():
+    pass
 
 list_of_tasks = []
+list_of_experts = []
 
-for task in range(1, 25):
+# Генерация заданий
+for task in range(1, 100):
     task = generate_task()
     list_of_tasks.append(task)
 
-expert_1 = generate_expert()
-expert_1.add_task(list_of_tasks[5])
-expert_1.debug_print_expert()
-expert_1.tasks[0].debug_print_task()
+# Генерация экспертов
+for expert in range(1, 5):
+    expert = generate_expert()
+    list_of_experts.append(expert)
+
+for expert in list_of_experts:
+    for task in list_of_tasks:
+        if expert.subjectArea == task.subjectArea:
+            expert.add_task(task)
+            print(f'Эксперт по предмету "{expert.subjectArea}" - Задание по "{task.subjectArea}"')
+
+
+
+
 
 
 
