@@ -29,7 +29,7 @@ class Task:
               f"Предметная область - {self.subjectArea}\n"
               f"Номер задания - {self.numberOfTask}\n"
               f"Вариант задания - {self.variantOfTask}\n"
-              f"Уровень задания - {self.isDifficult}"
+              f"Уровень задания - {self.isDifficult}\n"
               f"Количество проверок - {self.numberOfRate}\n"
               f"Необходимость в 3 проверке - {self.isThirdRate}\n"
               )

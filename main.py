@@ -1,11 +1,19 @@
 # Подключение классов
-from classes.answer import Answer
-from classes.task import Task
-from classes.expert import Expert
-from generator.generate_expert import generate_expert
+from generator.objects_generator import generate_task
+from generator.objects_generator import generate_expert
 
 import random
 
-import harvested_information.harvested as hs
+list_of_tasks = []
+
+for task in range(1, 25):
+    task = generate_task()
+    list_of_tasks.append(task)
+
+expert_1 = generate_expert()
+expert_1.add_task(list_of_tasks[5])
+expert_1.debug_print_expert()
+expert_1.tasks[0].debug_print_task()
+
 
 
